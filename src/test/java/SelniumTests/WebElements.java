@@ -4,12 +4,14 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.interactions.SourceType;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+import javax.lang.model.SourceVersion;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
@@ -74,11 +76,12 @@ public class WebElements {
 
     @Test
     public void elem() throws InterruptedException {
-       // PopUps
-//        driver.get("https://www.google.co.uk/");
-//        Thread.sleep(2000);
+//       // PopUps (like google GPDR agreement)
+//       driver.get("https://www.google.co.uk/");
+//      Thread.sleep(2000);
+//     // it is an example of finding by visible text
 //        WebElement agree=driver.findElement(By.xpath("//*[text()='I agree']"));
-//        agree.click();
+//       agree.click();
     //JS PopUps
 //        driver.get("https://demoqa.com/alerts");
 //        WebElement button1=driver.findElement(By.id("alertButton"));
@@ -87,17 +90,17 @@ public class WebElements {
 //        Thread.sleep(2000);
 //        alert.accept();
 //        WebElement button3=driver.findElement(By.id("confirmButton"));
-//        alert=driver.switchTo().alert();
+//    //    alert=driver.switchTo().alert();
 //        button3.click();
 //        Thread.sleep(2000);
 //        alert.dismiss();
 
-// Select dropdown
+// Select dropdown menu
 //        driver.get("http://omayo.blogspot.com/");
 //        WebElement sel=driver.findElement(By.id("drop1"));
 //        Select select=new Select(sel);
 //        select.selectByIndex(0);
-// MultiSelect
+//// MultiSelect
 //        WebElement multi=driver.findElement(By.id("multiselect1"));
 //        Select multiSelect=new Select(multi);
 //        multiSelect.selectByValue("volvox");
@@ -130,11 +133,13 @@ public class WebElements {
         driver.get("http://omayo.blogspot.com/");
         WebElement mum=driver.findElement(By.xpath("//table[@id='table1']/tbody/tr[4]/td[3]"));
         System.out.println(mum.getText());
-        int row=12;   // row1 column 1.getText().contains("Goztepe")
-                        // Row 12 Column 7. getTetxt.sout
-        int column=7;
-        WebElement Table=driver.findElement(By.xpath("//table[@id='table1']/tbody/tr["+row+"]/td["+column+"]"));
+
+
+        int row=3;
+       int column=3;
+       WebElement Table=driver.findElement(By.xpath("//table[@id='table1']/tbody/tr["+row+"]/td["+column+"]"));
         System.out.println(Table.getText());
+
 
         for(int i=1;i<5;i++){
             for(int j=1;j<4;j++){
@@ -219,6 +224,7 @@ public class WebElements {
 
 
 
+
         }
 
 
@@ -239,8 +245,10 @@ public class WebElements {
 
 //            action.clickAndHold(drag).moveToElement(drop).pause(1000).release().perform();
 //            driver.get("https://demoqa.com/buttons");
+            // double click
 //            WebElement doubleClick=driver.findElement(By.id("doubleClickBtn"));
 //            action.doubleClick(doubleClick).perform();
+            //right click
 //            WebElement right=driver.findElement(By.id("rightClickBtn"));
 //            action.contextClick(right).perform();
 

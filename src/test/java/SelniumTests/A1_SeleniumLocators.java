@@ -80,6 +80,7 @@ public class A1_SeleniumLocators {
 //        String str=driver.findElement(By.xpath("//label[@for='RESULT_TextField-2']")).getText();
 //
 //        driver.findElement(By.xpath("//input[@name='RESULT_TextField-2']")).sendKeys("Surname");
+
         WebElement line=driver.findElement(By.xpath("//div[@itemprop='description articleBody']"));
         String str=line.getText();
         System.out.println(str);
@@ -119,7 +120,7 @@ public class A1_SeleniumLocators {
 //        Dimension dim=new Dimension(600,800);
 //        driver.manage().window().setSize(dim);
 //        driver.findElement(By.xpath("//*[@type='email']")).sendKeys("Hello");
-// CSS	tagName[AttributeName=‘AttributeValue’]
+// CSS	tagName[AttributeName=‘AttributeValue’]  //GENERAL FORMULA
 //        driver.findElement(By.cssSelector(" input[type='email']")).sendKeys("Merhaba");
         WebElement email=driver.findElement(By.cssSelector(" input[type='email']"));
         email.sendKeys("Ali@hotmail.com");
@@ -139,10 +140,10 @@ public class A1_SeleniumLocators {
 //        submitButton.click();
 
 //    STARTING WITH	TagName[attribute^=‘value’]
-//    ENDING WITH	TagName[attribute$=‘value’]
+
         WebElement adress=driver.findElement(By.cssSelector("textarea[id^='permanentA']"));
         adress.sendKeys("Sheffield");
-
+//    ENDING WITH	TagName[attribute$=‘value’]
         WebElement adressBox=driver.findElement(By.cssSelector("textarea[id$='rentAddress']"));
         adressBox.sendKeys("United Kingdom");
 

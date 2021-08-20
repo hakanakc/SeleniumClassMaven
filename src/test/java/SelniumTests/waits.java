@@ -52,7 +52,7 @@ public class waits {
 
 
     }
-
+// checks if the link is broken or not by using verifyLinks() method created below. do not memorize! copy paste.
     @Test
     public  void links(){
 //        driver.get("https://demoqa.com/links");
