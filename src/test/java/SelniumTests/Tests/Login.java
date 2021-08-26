@@ -62,6 +62,7 @@ public class Login extends TestBase {
 //        Thread.sleep(3000);
     }
 
+    // we are getting info from excell table below
     @DataProvider
 //    @Test
     public Object[][] excell(){
@@ -79,8 +80,10 @@ public class Login extends TestBase {
         int rowNo=ws.getLastRowNum();
         int columnNo=row.getLastCellNum();
         Object[][] data=new Object[rowNo][2];
+        // for loop created to get each cell one by one.
         for(int i=0;i<rowNo;i++){
             for(int j=0;j<2;j++){
+                // if there is a null cell we use below. otherwise will throw error.
                Cell cell=ws.getRow(i).getCell(j);
                if(cell!=null){Object cellData=cell.toString();
                data[i][j]=cellData;

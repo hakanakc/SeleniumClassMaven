@@ -20,6 +20,8 @@ public class InventoryPage extends BasePage {
     @FindBy(className = "inventory_item_price")
     public List<WebElement> ItemsPriceList;
 
+
+    // you will find
     public double add(String str){
         int a=0;
         for( int i=0; i<ItemName.size(); i++){
