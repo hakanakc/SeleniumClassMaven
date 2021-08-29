@@ -62,7 +62,7 @@ public class Login extends TestBase {
 //        Thread.sleep(3000);
     }
 
-    // we are getting info from excell table below
+    // we are getting info from excel table below
     @DataProvider
 //    @Test
     public Object[][] excell(){
@@ -215,7 +215,7 @@ public class Login extends TestBase {
     }
 
 
-
+// if I want to write something in a file i use below method. Firstly, we create a csv file.
     @Test
     public void Writer() throws IOException {
         File file= new File("Resource/Data.csv");
