@@ -28,6 +28,7 @@ import java.util.Date;
 public class Checkout1 extends TestBase {
 //    User can not checkout with invalid credentials
     //initialize the class
+    // creating report now below.
 //    ExtentReports report=new ExtentReports();
     //create a report path
 //    String path=System.getProperty("user.dir")+"/test-output/Screenshots/AAAA20.html";
@@ -43,6 +44,8 @@ public class Checkout1 extends TestBase {
 //        report.setSystemInfo("Browser", ConfigurationReader.get("browser"));
 //
 //    }
+
+    // if we get an error, then we expect to take a screenshot.
 //    @AfterMethod
 //    public void afterMethod(ITestResult result) throws IOException {
 //        //if test failed
